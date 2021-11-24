@@ -160,7 +160,7 @@ def event_handle(event,json_line):
             replyObj = TextSendMessage(text="USA กับ JAPANหน่ะ")
             line_bot_api.reply_message(rtoken, replyObj)
         else : 
-            eaders = request.headers
+            headers = request.headers
             json_headers = ({k:v for k, v in headers.items()})
             json_headers.update({'Host':'bots.dialogflow.com'})
             url = "https://dialogflow.cloud.google.com/v1/integrations/line/webhook/68745306-8684-4f87-a9d0-c375b348faea"
